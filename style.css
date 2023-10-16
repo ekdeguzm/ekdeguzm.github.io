@@ -10,11 +10,11 @@
 
   /* Default (light) theme */
   --bg: #fff;
-  --accent-bg: #f5f7ff;
+  --accent-bg: #ffffff;
   --text: #212121;
   --text-light: #585858;
-  --border: #898EA4;
-  --accent: #0d47a1;
+  --border: rgba(0, 0, 0, 0.6);
+  --accent: #7f0000;
   --code: #d81b60;
   --preformatted: #444;
   --marked: #ffdd33;
@@ -26,14 +26,15 @@
   :root,
   ::backdrop {
     color-scheme: dark;
-    --bg: #212121;
-    --accent-bg: #2b2b2b;
-    --text: #dcdcdc;
+    --bg: #202020;
+    --accent-bg: #202020;
+    --text: #d6d5d5;
     --text-light: #ababab;
-    --accent: #ffb300;
+    --accent: #d796d5;
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
+    --border: #d6d5d5;
   }
   /* Add a bit of transparency so light media isn't so glaring in dark mode */
   img,
@@ -67,10 +68,10 @@ html {
 body {
   color: var(--text);
   background-color: var(--bg);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   display: grid;
-  grid-template-columns: 1fr min(45rem, 90%) 1fr;
+  grid-template-columns: 1fr min(60rem, 90%) 1fr;
   margin: 0;
 }
 body > * {
@@ -80,30 +81,32 @@ body > * {
 /* Make the header bg full width, but the content inline with body */
 body > header {
   background-color: var(--accent-bg);
-  border-bottom: 1px solid var(--border);
-  text-align: center;
-  padding: 0 0.5rem 2rem 0.5rem;
-  grid-column: 1 / -1;
-}
-
-body > header > *:only-child {
-  margin-block-start: 2rem;
+ /* border-bottom: 1px solid var(--border);*/
+  text-align: left;
+  padding: .5rem 0.5rem 1rem 0.5rem;
 }
 
 body > header h1 {
   max-width: 1200px;
-  margin: 1rem auto;
+  margin: 1rem auto .3rem;
+  color: var(--text);
 }
 
 body > header p {
   max-width: 40rem;
-  margin: 1rem auto;
 }
 
 /* Add a little padding to ensure spacing is correct between content and header > nav */
-main {
+main#home {
   padding-top: 1.5rem;
 }
+
+main > p:first-of-type {
+  margin-top: 0;
+}
+
+
+
 
 body > footer {
   margin-top: 4rem;
@@ -120,13 +123,15 @@ h1 {
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.1rem;
   margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 2rem;
-  margin-top: 3rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
 }
 
 h4 {
@@ -139,10 +144,6 @@ h5 {
 
 h6 {
   font-size: 0.96rem;
-}
-
-p {
-  margin: 1.5rem 0;
 }
 
 /* Prevent long strings from overflowing container */
@@ -168,7 +169,7 @@ h3 {
   }
 
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   h4 {
@@ -180,10 +181,19 @@ h3 {
 a,
 a:visited {
   color: var(--accent);
+  text-decoration: none;
+  text-decoration-line: underline;
 }
 
 a:hover {
   text-decoration: none;
+  color: var(--text);
+}
+
+header > a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: auto;
 }
 
 button,
@@ -193,11 +203,15 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 label[type="button"] {
-  border: 1px solid var(--accent);
+  border: none;
+  border-radius: var(--standard-border-radius);
   background-color: var(--accent);
+  font-size: 1rem;
   color: var(--bg);
-  padding: 0.5rem 0.9rem;
+  padding: 0.7rem 0.9rem;
+  margin: 0.5rem 0;
   text-decoration: none;
+  font-family: inherit;
   line-height: normal;
 }
 
@@ -208,8 +222,7 @@ select:disabled,
 button[disabled] {
   cursor: not-allowed;
   background-color: var(--disabled);
-  border-color: var(--disabled);
-  color: var(--text-light);
+  color: var(--text-light)
 }
 
 input[type="range"] {
@@ -246,16 +259,21 @@ input:enabled:focus-visible:where(
 
 /* Format navigation */
 header > nav {
-  font-size: 1rem;
-  line-height: 2;
-  padding: 1rem 0 0 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.6rem 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 
 /* Use flexbox to allow items to wrap, as needed */
 header > nav ul,
 header > nav ol {
   align-content: space-around;
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -273,21 +291,23 @@ header > nav ol li {
 
 header > nav a,
 header > nav a:visited {
-  margin: 0 0.5rem 1rem 0.5rem;
-  border: 1px solid var(--border);
+  margin: 0rem 1rem;
+  /*border: 1px solid var(--border);*/
   border-radius: var(--standard-border-radius);
-  color: var(--text);
+  color: var(--accent);
   display: inline-block;
-  padding: 0.1rem 1rem;
+  /*padding: 0rem 1rem;*/
   text-decoration: none;
+  padding-right: .5rem;
 }
 
 header > nav a:hover,
 header > nav a.current,
 header > nav a[aria-current="page"] {
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--text);
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Reduce nav side on mobile */
@@ -295,7 +315,7 @@ header > nav a[aria-current="page"] {
   header > nav a {
     border: none;
     padding: 0;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     line-height: 1;
   }
 }
@@ -303,9 +323,8 @@ header > nav a[aria-current="page"] {
 /* Consolidate box styling */
 aside, details, pre, progress {
   background-color: var(--accent-bg);
-  border: 1px solid var(--border);
   border-radius: var(--standard-border-radius);
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 aside {
@@ -313,11 +332,38 @@ aside {
   width: 30%;
   padding: 0 15px;
   margin-inline-start: 15px;
-  float: right;
+  margin-inline-end: 15px;
+  float: left;
 }
 *[dir="rtl"] aside {
   float: left;
 }
+
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  border: solid 1px;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+.project > div:first-child {
+  padding: 0 1.5rem;
+  margin: 1.5rem 0;
+  border-right: solid 1px;
+  border-radius: 0;
+}
+
+.project p {
+  margin-block-end: 0;
+  margin-inline: 1rem .5rem;
+}
+
+.project h2{
+  margin: 0 0rem 3rem 0;
+}
+
 
 /* Make aside full-width on mobile */
 @media only screen and (max-width: 720px) {
@@ -414,24 +460,18 @@ table caption {
 /* Format forms */
 textarea,
 select,
-input,
-button,
-.button {
+input {
   font-size: inherit;
   font-family: inherit;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
   border-radius: var(--standard-border-radius);
   box-shadow: none;
   max-width: 100%;
   display: inline-block;
-}
-textarea,
-select,
-input {
-  color: var(--text);
-  background-color: var(--bg);
-  border: 1px solid var(--border);
 }
 label {
   display: block;
@@ -536,10 +576,6 @@ mark {
   border-radius: var(--standard-border-radius);
   background-color: var(--marked);
   color: black;
-}
-
-mark a {
-  color: #0d47a1;
 }
 
 img,
@@ -664,21 +700,6 @@ dialog::backdrop {
   }
 }
 
-/* Superscript & Subscript */
-/* Prevent scripts from affecting line-height. */
-sup, sub {
-  vertical-align: baseline;
-  position: relative;
-}
-
-sup {
-  top: -0.4em;
-}
-
-sub { 
-  top: 0.3em; 
-}
-
 /* Classes for notices */
 .notice {
   background: var(--accent-bg);
@@ -686,4 +707,21 @@ sub {
   border-radius: 5px;
   padding: 1.5rem;
   margin: 2rem 0;
+}
+
+.icon {
+  vertical-align: sub;
+  padding-right: .25rem;
+  display: inline-block;
+  width: 1em;
+  height: 1.3em;
+  margin-right: 0.2rem;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  }
+
+#name {
+  color: var(--text);
+  text-decoration-line: none;
 }
