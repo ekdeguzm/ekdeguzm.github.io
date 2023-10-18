@@ -738,13 +738,13 @@ dialog::backdrop {
 }
 
 #title-block-header a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #title-block-header a img {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 #title-block-header a:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
