@@ -320,6 +320,11 @@ header > nav a[aria-current="page"] {
   }
 }
 
+In this version, each link contains a div with a class of "icon-container" that wraps both the img for the icon and the span for the link text. The CSS applies the hover effect to the entire "icon-container", causing both the icon and the text to zoom in when you hover over the link.
+
+Adjust the transform scale factor (1.2) in the CSS to control the extent of the zoom effect to your preference.
+
+
 /* Consolidate box styling */
 aside, details, pre, progress {
   background-color: var(--accent-bg);
@@ -724,4 +729,22 @@ dialog::backdrop {
 #name {
   color: var(--text);
   text-decoration-line: none;
+}
+
+/* Add this CSS for zoom effect on icons and links */
+#title-block-header a {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+#title-block-header a:hover {
+  transform: scale(1.2);
+}
+
+#title-block-header a img {
+  transition: transform 0.3s ease-in-out;
+}
+
+#title-block-header a:hover img {
+  transform: scale(1.2);
 }
