@@ -193,7 +193,7 @@ a:hover {
 header > a {
   color: var(--accent);
   text-decoration: none;
-  margin: auto;
+  margin-right: 10px;
 }
 
 button,
