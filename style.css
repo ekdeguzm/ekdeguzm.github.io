@@ -97,7 +97,7 @@ body > header p {
 }
 
 /* Add a little padding to ensure spacing is correct between content and header > nav */
-main#home {
+main#index {
   padding-top: 0.5rem;
 }
 
