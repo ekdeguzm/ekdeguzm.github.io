@@ -26,11 +26,11 @@
   :root,
   ::backdrop {
     color-scheme: dark;
-    --bg: #202020;
-    --accent-bg: #202020;
-    --text: #d6d5d5;
+    --bg: ##0f2300;
+    --accent-bg: ##0f2300;
+    --text: ##c9e6b3;
     --text-light: #ababab;
-    --accent: #d796d5;
+    --accent: #ee7249;
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
