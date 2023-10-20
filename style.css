@@ -800,3 +800,18 @@ header a {
 header a:active {
   text-decoration: underline;
 }
+
+main .contact-box a {
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+#contact-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; /* Set to full viewport height */
+  text-align: center; /* Optional for centering text */
+  margin-bottom: 40px;
+}
