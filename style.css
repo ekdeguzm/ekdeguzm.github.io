@@ -744,3 +744,12 @@ dialog::backdrop {
   transform: scale(1.1);
 }
 
+.project-link {
+  display: inline-flex; /* This makes the <p> elements inline */
+  margin-right: 1%; /* Add some margin to separate them */
+  margin-top: 10px;
+}
+
+.project-text {
+  margin-top: 30px;
+}
