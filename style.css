@@ -84,8 +84,8 @@ body > header {
 /* border-bottom: 1px solid var(--border);*/
   text-align: left;
   padding-left: 0px;
-  padding-top: 16px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 40px;
   /* padding: .5rem 0.5rem 1rem 0.5rem; */
 }
 
@@ -101,7 +101,7 @@ body > header p {
 
 /* Add a little padding to ensure spacing is correct between content and header > nav */
 main#index {
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 main > p:first-of-type {
@@ -109,12 +109,12 @@ main > p:first-of-type {
 }
 
 body > footer {
-  margin-top: 4rem;
-  padding: 2rem 1rem 1.5rem 1rem;
-  color: var(--text-light);
+  margin-top: 2rem;
+  padding: 1rem 1rem 1.5rem 0rem;
+  color:#c9e6b3;
   font-size: 0.9rem;
-  text-align: center;
-  border-top: 1px solid var(--border);
+  text-align: left;
+  border-top: 0px double var(--border);
 }
 
 /* Format headers */
@@ -799,8 +799,4 @@ header a {
 /* Add underline to links when they are selected (clicked) */
 header a:active {
   text-decoration: underline;
-}
-
-footer {
-  text-align: left;
 }
