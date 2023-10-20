@@ -756,4 +756,5 @@ dialog::backdrop {
 
 .project-text p {
   margin-bottom: 27px;
+  float: inline-start;
 }
