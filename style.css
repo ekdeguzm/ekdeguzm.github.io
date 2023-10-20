@@ -83,7 +83,10 @@ body > header {
   background-color: var(--accent-bg);
 /* border-bottom: 1px solid var(--border);*/
   text-align: left;
-  padding: .5rem 0.5rem 1rem 0.5rem;
+  padding-left: 0px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  /* padding: .5rem 0.5rem 1rem 0.5rem; */
 }
 
 body > header h1 {
@@ -98,7 +101,7 @@ body > header p {
 
 /* Add a little padding to ensure spacing is correct between content and header > nav */
 main#index {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 
 main > p:first-of-type {
@@ -787,4 +790,17 @@ dialog::backdrop {
 .title {
   font-size: 44px; /* Adjust font size as needed */
   margin: 0;
+}
+
+header a {
+  text-decoration: none;
+}
+
+/* Add underline to links when they are selected (clicked) */
+header a:active {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: left;
 }
