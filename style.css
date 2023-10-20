@@ -756,3 +756,35 @@ dialog::backdrop {
   float: inline-start;
 }
 
+/* Add the following styles to position elements */
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+}
+
+/* Adjust margins and padding for spacing */
+.header-left {
+  margin: 0;
+  padding: 0 0px; /* Add space between the name and links */
+}
+
+.header-right a {
+  margin: 0;
+  padding: 0 10px; /* Add space between the links */
+}
+
+/* Clear floats to prevent layout issues */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the title */
+.title {
+  font-size: 44px; /* Adjust font size as needed */
+  margin: 0;
+}
