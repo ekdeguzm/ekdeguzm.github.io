@@ -105,9 +105,6 @@ main > p:first-of-type {
   margin-top: 0;
 }
 
-
-
-
 body > footer {
   margin-top: 4rem;
   padding: 2rem 1rem 1.5rem 1rem;
@@ -758,3 +755,4 @@ dialog::backdrop {
   margin-bottom: 27px;
   float: inline-start;
 }
+
