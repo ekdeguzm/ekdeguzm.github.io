@@ -815,3 +815,20 @@ main .contact-box a {
   text-align: center; /* Optional for centering text */
   margin-bottom: 40px;
 }
+
+.contact-box a {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-box a:hover {
+  transform: scale(1.1);
+}
+
+.contact-box a img {
+  transition: transform 0.5s ease-in-out;
+}
+
+#title-block-header a:hover img {
+  transform: scale(1.1);
+}
