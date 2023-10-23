@@ -838,3 +838,13 @@ main .contact-box a {
   align-items: center;
   /* Add any other CSS styles you need. */
 }
+
+  /* Your CSS styles for the current year placeholder */
+#current-year {
+  margin-top: 2rem;
+  padding: 1rem 1rem 1.5rem 0rem;
+  color: #c9e6b3;
+  font-size: 0.9rem;
+  text-align: left;
+  border-top: 0px double var(--border);
+}
