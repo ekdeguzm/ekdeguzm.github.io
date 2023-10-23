@@ -832,3 +832,9 @@ main .contact-box a {
 #title-block-header a:hover img {
   transform: scale(1.1);
 }
+
+.code-text-photo {
+  display: flex;
+  align-items: center;
+  /* Add any other CSS styles you need. */
+}
