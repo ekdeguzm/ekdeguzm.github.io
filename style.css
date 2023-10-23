@@ -110,7 +110,7 @@ main > p:first-of-type {
 
 body > footer {
   margin-top: 2rem;
-  padding: 1rem 1rem 1.5rem 0rem;
+  padding: 1rem 1rem 0.5rem 0rem;
   color:#c9e6b3;
   font-size: 0.9rem;
   text-align: left;
