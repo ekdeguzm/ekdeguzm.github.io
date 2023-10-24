@@ -846,3 +846,11 @@ main .contact-box a {
   display: flex;
   align-items: center;
 } */
+
+/* a {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+} */
