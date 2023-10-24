@@ -841,23 +841,15 @@ main .contact-box a {
   transform: scale(1.1);
 }
 
-  /* Add any other CSS styles you need. */
-/* .code-text-photo {
-  display: flex;
-  align-items: center;
-} */
-
-/* a {
-  text-decoration: none;
-}
-
-a:active {
-  text-decoration: none;
-} */
-
 #resume-home {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+
+#resume-text {
+  width: 800px;
+  text-align: left;
 }
