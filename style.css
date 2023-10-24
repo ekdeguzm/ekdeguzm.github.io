@@ -338,13 +338,9 @@ aside {
   float: inline-end;
 }
 
-main #home aside {
-  font-size: 1rem;
+#home aside {
   width: 35%;
-  padding: 0 15px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  float: inline-end;
+  margin-bottom: 50px;
 }
 
 *[dir="rtl"] aside {
