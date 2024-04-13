@@ -20,6 +20,12 @@
   --disabled: #efefef;
 }
 
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root,
@@ -51,8 +57,7 @@
 }
 
 /* Reset default appearance */
-textarea,
-select,
+textarea select,
 input,
 progress {
   appearance: none;
@@ -113,12 +118,12 @@ main > p:first-of-type {
 
 body > footer {
   margin-top: 2rem;
-  padding: 1rem 1rem 0.5rem 0rem;
+  padding: 0px;
   color: #c9e6b3;
   font-size: 0.9rem;
-  text-align: left;
-  border-top: 0px double var(--border);
-  clear: both;
+  text-align: center;
+  max-height: 0px;
+  display: inline-block;
 }
 
 /* Format headers */
@@ -322,6 +327,14 @@ header > nav a[aria-current="page"] {
     padding: 0;
     /*text-decoration: underline;*/
     line-height: 1;
+  }
+}
+
+/* make nav bar respond to smaller window  */
+@media (max-width: 720px) {
+  .header-right {
+    display: block;
+    text-align: justify;
   }
 }
 
