@@ -118,6 +118,7 @@ body > footer {
   font-size: 0.9rem;
   text-align: left;
   border-top: 0px double var(--border);
+  clear: both;
 }
 
 /* Format headers */
@@ -872,10 +873,10 @@ main .contact-box a {
   text-align: left;
 }
 
+/* #home img {
+  float: right;
+} */
+
 /* .text-box {
   float: left;
-}
-
-#home img {
-  float: right;
 } */
