@@ -1,94 +1,273 @@
 <!DOCTYPE html>
-<html lang="en-US">
+
+<html>
   <head>
+    <title>Emil's Portfolio</title>
     <meta charset="utf-8" />
-    <title>Emil De Guzman</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" type="image/jpg" href="files/pixel_about.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-
-  <body>
-    <header id="title-block-header">
-      <div class="header-left">
-        <h1 class="title">Emil De Guzman</h1>
-      </div>
-      <div class="header-right">
-        <nav>
-          <a href="index.html">
-            <img src="files/pixel_about.png" alt="About Icon" /> Home
-          </a>
-
-          <a href="code.html">
-            <img src="files/pixel_portfolio.png" alt="Floppy Disk Icon" /> Code
-          </a>
-
-          <a href="contact.html">
-            <img src="files/pixel_contact.png" alt="Envelope Icon" /> Contact
-          </a>
-        </nav>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <img class="image avatar" src="images/profile.jpg" />
+        <h1>
+          <strong>Emil.</strong>
+          <br />Software Engineer.
+        </h1>
       </div>
     </header>
 
-    <main id="home">
-      <aside>
-        <img
-          id="headshot"
-          src="files/Emil_Headshot.png"
-          alt="Picture of Emil with a bright background."
-        />
-      </aside>
+    <!-- Main -->
+    <div id="main">
+      <!-- One -->
+      <section id="one">
+        <header class="major">
+          <h2>About Me</h2>
+        </header>
+        <ul id="flowers">
+          <li>
+            As a biologist turned software engineer, I graduated from University
+            of California Davis, where I developed software to improve data
+            analysis for an estuarine ecology research project. In 2022, I
+            received a grant to participate in a self-directed programming
+            retreat at the Recurse Center. My experiences endow me with an
+            analytical mind and a meticulous eye for detail, all of which are
+            reflected in my user-centric approach to software engineering.
+          </li>
+          <li>
+            My recent project, Bog Blog, is a web application that allows users
+            to create and search for blog posts. The application is built using
+            Express, EJS, and Node.js, and uses Nodemon for development. Beyond
+            an app, it signifies my commitment to a world where knowledge is not
+            only discovered, but also shared and understood by all.
+          </li>
+          <li>
+            Let's connect and explore how we can leverage technology to create
+            accessible and empowering tools.
+          </li>
+        </ul>
+      </section>
 
-      <div class="text-box">
-        <p>
-          Hello! My name is Emil De Guzman, a full-stack engineer based in San
-          Francisco California. I love building. What draws me to programming is
-          the ability to craft mere ideas into realities on the internet.
-        </p>
+      <!-- Two -->
+      <section id="two">
+        <header class="major">
+          <h2>Skills</h2>
+        </header>
+        <ul id="flowers">
+          <li>
+            <strong>Programming Languages</strong>: JavaScript, Python, SQL, R
+          </li>
+          <li>
+            <strong>Front-End Development</strong>: HTML, CSS, jQuery,
+            Bootstrap, Tailwind, React,
+          </li>
+          <li>
+            <strong>Back-End Development</strong>: Node, Express, EJS, REST
+            APIs, Postman
+          </li>
+          <li><strong>Databases</strong>: MongoDB, Mongoose, MySQL</li>
+          <li><strong>Data Visualization</strong>: R, NumPy, Matplotlib</li>
+          <li>
+            <strong>Other</strong>: Docker, Git, GitHub, GitHub Actions, Project
+            management, Figma, Miro, UI/UX design
+          </li>
+        </ul>
+        <ul class="actions">
+          <li>
+            <a href="Emil_DeGuzman_Resume.pdf" class="button" target="_blank"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </section>
 
-        <p>
-          In 2022, I received a grant to participate in a self-directed
-          programming retreat at the
-          <a href="https://www.recurse.com/">Recurse Center</a>. There, I
-          created web apps, collaborated with other engineers, and studied
-          <a href="https://teachyourselfcs.com/"
-            >foundational computer science</a
-          >.
-        </p>
+      <!-- Three -->
+      <section id="three">
+        <header class="major">
+          <h2>Portfolio</h2>
+        </header>
 
-        <p>
-          I love to go on adventures outside, run, ride my bike, and create
-          <a
-            href="https://open.spotify.com/intl-es/artist/4d1LMfa1HX0vBHO0o1B6jE?si=22qea_8PSJuy-YJ1_ZPpdg"
-            >music</a
-          >. <br />In 2023, I spent 10 months in Taiwan gaining fluency in
-          Mandarin.
-        </p>
+        <h2 class="align-center">Web Applications</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <a
+              href="https://github.com/ekdeguzm/blog/"
+              target="_blank"
+              class="image fit thumb"
+              ><img src="images/thumbs/bog-blog.png" alt="preview of bog-blog"
+            /></a>
+            <h3>Bog Blog</h3>
+            <p>
+              Bog Blog is a web application that allows users to create and
+              search for blog posts. The application is built using Express,
+              EJS, and Node.js, and uses Nodemon for development.
+            </p>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <a
+              href="https://github.com/ekdeguzm/dryclo/"
+              target="_blank"
+              class="image fit thumb"
+              ><img
+                src="images/thumbs/dry_clothes_bot_3.png"
+                alt="preview of dry clothes bot"
+            /></a>
+            <h3>Dryclo</h3>
+            <p>
+              Dryclo leverages the OpenWeatherMap API to retrieve weather
+              information and then sends a text message using the Twilio service
+              to notify the user about the weather conditions, with a specific
+              focus on rain. The program is designed to assist users in making
+              weather-informed decisions for their day.
+            </p>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <a
+              href="https://ekdeguzm.github.io/weather-app/"
+              target="_blank"
+              class="image fit thumb"
+              ><img
+                src="images/thumbs/weather_app.png"
+                alt="preview of weather_app"
+            /></a>
+            <h3>Weather</h3>
+            <p>Get accurate weather information across the world.</p>
+          </article>
+        </div>
 
-        <p>
-          Whether you want to talk software development, traveling,
-          <br />or just want to say hi — I’m always open to new opportunities
-          and connections.
-          <br />
-          <a href="contact.html">Let's chat</a>!
-        </p>
+        <h2 class="align-center">Websites</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <a
+              href="https://ekdeguzm.github.io/robyndeguzman/"
+              target="_blank"
+              class="image fit thumb"
+              ><img
+                src="images/thumbs/robyn_website.png"
+                alt="preview of Robyn's website"
+            /></a>
+            <h3>Robyn's Website</h3>
+            <p>
+              A a responsive website for a local artist to showcase their shows,
+              contact information, and biography, while facilitating ongoing
+              engagement.
+            </p>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <a
+              href="https://ekdeguzm.github.io/sign_up_form/"
+              target="_blank"
+              class="image fit thumb"
+              ><img
+                src="images/thumbs/cyber_world.png"
+                alt="preview of Cyber world website"
+            /></a>
+            <h3>Cyber World</h3>
+            <p>A cyber punk themed sign-up form.</p>
+          </article>
+        </div>
 
-        <p>
-          <img src="files/pixel_stars.png" alt="Stars Icon" />
-          I’m looking for work! Full-time or contract.
-          <img src="files/pixel_stars.png" alt="Stars Icon" />
-        </p>
+        <h2 class="align-center">Games</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <a
+              href="https://github.com/ekdeguzm/space_invaders"
+              target="_blank"
+              class="image fit thumb"
+              ><img
+                src="images/thumbs/space_invaders.png"
+                alt="preview of matching card game"
+                height="auto"
+                width="100px"
+            /></a>
+            <h3>Space Invaders</h3>
+            <p>This is my interpretation of the classic space invaders game!</p>
+          </article>
+        </div>
 
-        <small
-          ><small>
-            Sidenote: All icons are created by yours truly ~
-          </small></small
-        >
+        <h2 class="align-center">Other</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <a
+              href="https://ekdeguzm.github.io/etch_a_sketch/"
+              target="_blank"
+              class="image fit thumb"
+              ><img
+                src="images/thumbs/etch_a_sketch.png"
+                alt="preview of etch_a_sketch"
+            /></a>
+            <h3>Etch-a-sketch</h3>
+            <p>Apply your creativity with ease using a plethora of colors.</p>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <a
+              href="https://ekdeguzm.github.io/calculator/"
+              target="_blank"
+              class="image fit thumb"
+              ><img
+                src="images/thumbs/calculator.png"
+                alt="preview of calculator"
+            /></a>
+            <h3>Simple Calculator</h3>
+            <p>
+              Perform basic operations, handle decimals, save memory, and
+              delete. As Shakespeare said, though she be but little, she is
+              fierce.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://github.com/ekdeguzm"
+              class="icon brands fa-github"
+              target="_blank"
+            >
+              <span class="label">Github</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/emildeguzman/"
+              class="icon brands fa-linkedin"
+              target="_blank"
+            >
+              <span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:em.deguzm@gmail.com"
+              class="icon solid fa-envelope"
+              target="_blank"
+            >
+              <span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Emil De Guzman</li>
+        </ul>
       </div>
-    </main>
-
-    <footer>
-      <p>© <span id="current-year"></span> Emil De Guzman</p>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
