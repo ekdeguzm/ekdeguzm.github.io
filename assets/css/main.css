@@ -3339,3 +3339,17 @@ body.is-touch .poptrox-popup .closer {
   padding-right: 1em;
   color: #727272;
 }
+
+/* CSS for Aligned Paragraphs */
+.aligned-paragraphs {
+  list-style-type: none; /* Removes bullet points */
+  padding-left: 0; /* Aligns text flush with the section */
+  margin: 0; /* Removes default margin */
+}
+
+.aligned-paragraphs li {
+  display: block; /* Ensures each item behaves like a block */
+  margin-bottom: 1.5em; /* Adds space between each paragraph */
+  line-height: 1.6; /* Improves readability with line height */
+  text-indent: 0; /* Ensures no indentation */
+}
