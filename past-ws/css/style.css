@@ -211,6 +211,8 @@ header > a {
   margin-right: 10px;
 }
 
+
+
 button, .button, a.button, /* extra specificity to override a */
 input[type="submit"], input[type="reset"], input[type="button"], label[type="button"] {
   border: none;
